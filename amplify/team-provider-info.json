@@ -1,0 +1,15 @@
+{
+  "local": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-coinapp-local-152504-authRole",
+      "UnauthRoleArn": "arn:aws:iam::344555621384:role/amplify-coinapp-local-152504-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::344555621384:role/amplify-coinapp-local-152504-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-coinapp-local-152504-deployment",
+      "UnauthRoleName": "amplify-coinapp-local-152504-unauthRole",
+      "StackName": "amplify-coinapp-local-152504",
+      "StackId": "arn:aws:cloudformation:us-east-2:344555621384:stack/amplify-coinapp-local-152504/d8ecb540-d1c8-11ee-a5b6-0218b8bfc8c3",
+      "AmplifyAppId": "d1p85wy9fii35r"
+    }
+  }
+}
