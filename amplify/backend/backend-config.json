@@ -48,5 +48,23 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
+  },
+  "parameters": {
+    "AMPLIFY_function_coinfunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "coinfunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_coinfunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "coinfunction"
+        }
+      ]
+    }
   }
 }

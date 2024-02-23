@@ -9,14 +9,21 @@
       "UnauthRoleName": "amplify-coinapp-local-152504-unauthRole",
       "StackName": "amplify-coinapp-local-152504",
       "StackId": "arn:aws:cloudformation:us-east-2:344555621384:stack/amplify-coinapp-local-152504/d8ecb540-d1c8-11ee-a5b6-0218b8bfc8c3",
-      "AmplifyAppId": "d1p85wy9fii35r"
+      "AmplifyAppId": "d1p85wy9fii35r",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-coinapp-local-152504-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "function": {
-        "coinfunction": {}
+        "coinfunction": {
+          "deploymentBucketName": "amplify-coinapp-local-152504-deployment",
+          "s3Key": "amplify-builds/coinfunction-424d4969577958655355-build.zip"
+        }
       },
       "auth": {
         "coinapp": {}
+      },
+      "api": {
+        "coinapi": {}
       }
     }
   }
