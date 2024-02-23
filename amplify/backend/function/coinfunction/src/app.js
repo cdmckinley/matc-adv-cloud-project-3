@@ -86,6 +86,7 @@ app.delete('/item/*', function(req, res) {
  * Coin GET method *
  ***************************/
 
+// Based on the textbook code
 app.get('coins', (req, res) => {
   const coins = [
     { name: 'Bitcoin', symbol: 'BTC', price_usd: "10000" },
