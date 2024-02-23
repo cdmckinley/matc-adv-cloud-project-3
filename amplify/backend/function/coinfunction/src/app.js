@@ -82,6 +82,23 @@ app.delete('/item/*', function(req, res) {
   res.json({success: 'delete call succeed!', url: req.url});
 });
 
+/****************************
+ * Coin GET method *
+ ***************************/
+
+app.get('coins', (req, res) => {
+  const coins = [
+    { name: 'Bitcoin', symbol: 'BTC', price_usd: "10000" },
+    { name: 'Etherium', symbol: 'ETH', price_usd: "400" },
+    { name: 'LiteCoin', symbol: 'LTC', price_usd: "150"}
+  ];
+  res.json({coins});  
+});
+
+/****************************
+ * Listen for requests *
+ ***************************/
+
 app.listen(3000, function() {
     console.log("App started")
 });
