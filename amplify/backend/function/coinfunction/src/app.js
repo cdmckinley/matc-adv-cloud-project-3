@@ -87,7 +87,7 @@ app.delete('/item/*', function(req, res) {
  ***************************/
 
 // Based on the textbook code
-app.get('coins', (req, res) => {
+app.get('/coins', (req, res) => {
   const coins = [
     { name: 'Bitcoin', symbol: 'BTC', price_usd: "10000" },
     { name: 'Etherium', symbol: 'ETH', price_usd: "400" },
