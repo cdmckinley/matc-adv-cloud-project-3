@@ -11,7 +11,7 @@ const App = () => {
 
   // Define function to all API
   // TODO make notes about changes to this function :)
-  async function fetchCoins() {
+  const fetchCoins = async() => {
     const restOperation = await get({
       apiName: 'coinapi',
       path: '/coins'  
