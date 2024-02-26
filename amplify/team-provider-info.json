@@ -19,9 +19,6 @@
           "s3Key": "amplify-builds/coinfunction-424d4969577958655355-build.zip"
         }
       },
-      "auth": {
-        "coinapp": {}
-      },
       "api": {
         "coinapi": {}
       }
