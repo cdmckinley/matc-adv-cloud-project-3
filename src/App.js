@@ -1,23 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import { useState, useEffect } from 'react';
+// Source: https://docs.amplify.aws/react/build-a-backend/restapi/fetch-data/
+import { get } from 'aws-amplify/api';
+
+// App component. Modified from textbook to assign my own API
+const App = () => {
+  // Create coins variable and set to empty array
+  const [coins, updateCoins] = useState([])
+
+  // Define function to all API
+  // TODO make notes about changes to this function :)
+  async function fetchCoins() {
+    const restOperation = await get({
+      apiName: 'coinapi',
+      path: '/coins'  
+    })
+    const { body } = await restOperation.response;
+    const json = await body.json();
+    updateCoins(json.coins);
+  }
+
+  // Call fetchCoins function when component loads
+  useEffect(() => {
+    fetchCoins()
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        coins.map((coin, index) => (
+          <div key={index}>
+            <h2>{coin.name} - {coin.symbol}</h2>
+            <h5>${coin.price_usd}</h5>
+          </div>
+        ))
+      }
     </div>
   );
 }
