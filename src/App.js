@@ -9,12 +9,20 @@ const App = () => {
   // Create coins variable and set to empty array
   const [coins, updateCoins] = useState([])
 
+  // State for input of limit and start parameters for the API request
+  const [input, updateInput] = useState({ limit: 5, start: 0 });
+
+  const updateInputValues = (type, value) => {
+    updateInput({ ...input, [type]: value });
+  }
+
   // Define function to all API
   // TODO make notes about changes to this function :)
   const fetchCoins = async() => {
+    const { limit, start } = input;
     const restOperation = await get({
       apiName: 'coinapi',
-      path: '/coins'  
+      path: `/coins?limit=${limit}&start=${start}`
     })
     const { body } = await restOperation.response;
     const json = await body.json();
@@ -28,14 +36,29 @@ const App = () => {
 
   return (
     <div className="App">
+      <ul>
       {
         coins.map((coin, index) => (
-          <div key={index}>
-            <h2>{coin.name} - {coin.symbol}</h2>
-            <h5>${coin.price_usd}</h5>
-          </div>
+          <li key={index}>
+            <strong>{coin.name} - {coin.symbol}</strong>:
+            <span>${coin.price_usd}</span>
+          </li>
         ))
       }
+      </ul>
+      <input
+        onChange={e => updateInputValues('limit', e.target.value)}
+        placeholder='limit'
+      />
+      <input
+        onChange={e => updateInputValues('start', e.target.value)}
+        placeholder='start'
+      />
+      <button 
+        onClick={fetchCoins} 
+      >
+        Fetch Coins
+      </button>
     </div>
   );
 }
