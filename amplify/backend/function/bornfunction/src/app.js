@@ -37,7 +37,7 @@ app.get('/born', (req, res) => {
 
   axios.get(apiUrl)
     .then(response => {
-      res.json(response.data.created_at);
+      res.json({createdAt: response.data.created_at});
     })
     .catch(err => res.json({error: err}));
 });
