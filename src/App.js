@@ -4,6 +4,9 @@ import { useState, useEffect } from 'react';
 // Source: https://docs.amplify.aws/react/build-a-backend/restapi/fetch-data/
 import { get } from 'aws-amplify/api';
 
+import CreatedOn from './GitHubBornOn';
+import LoadingText from './LoadingText';
+
 // App component. Modified from textbook to assign my own API
 const App = () => {
   // Create coins variable and set to empty array
@@ -36,6 +39,14 @@ const App = () => {
 
   return (
     <div className="App">
+      <h2>Coin values</h2>
+      {
+        !coins.length
+        ? <>
+            <LoadingText/>
+            <br/>
+          </>
+        :
       <ul>
       {
         coins.map((coin, index) => (
@@ -46,6 +57,7 @@ const App = () => {
         ))
       }
       </ul>
+      }
       <input
         onChange={e => updateInputValues('limit', e.target.value)}
         placeholder='limit'
@@ -59,6 +71,8 @@ const App = () => {
       >
         Fetch Coins
       </button>
+      <h2>GitHub account creation date</h2>
+      <CreatedOn/>
     </div>
   );
 }
