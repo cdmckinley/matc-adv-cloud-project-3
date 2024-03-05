@@ -7,6 +7,13 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "function": {
+    "bornfunction": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
     "coinfunction": {
       "Arn": "string",
       "LambdaExecutionRole": "string",

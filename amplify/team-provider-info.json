@@ -16,7 +16,11 @@
       "function": {
         "coinfunction": {
           "deploymentBucketName": "amplify-coinapp-local-152504-deployment",
-          "s3Key": "amplify-builds/coinfunction-2b6868444d304b423267-build.zip"
+          "s3Key": "amplify-builds/coinfunction-4749493067745072596b-build.zip"
+        },
+        "bornfunction": {
+          "deploymentBucketName": "amplify-coinapp-local-152504-deployment",
+          "s3Key": "amplify-builds/bornfunction-41734e456c5242787872-build.zip"
         }
       },
       "api": {

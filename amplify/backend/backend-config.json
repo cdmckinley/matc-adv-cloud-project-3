@@ -9,6 +9,14 @@
           ],
           "category": "function",
           "resourceName": "coinfunction"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "bornfunction"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -17,6 +25,12 @@
   },
   "auth": {},
   "function": {
+    "bornfunction": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "coinfunction": {
       "build": true,
       "dependsOn": [],
@@ -25,6 +39,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_bornfunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bornfunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_bornfunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bornfunction"
+        }
+      ]
+    },
     "AMPLIFY_function_coinfunction_deploymentBucketName": {
       "usedBy": [
         {
