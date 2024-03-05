@@ -20,7 +20,7 @@
         },
         "bornfunction": {
           "deploymentBucketName": "amplify-coinapp-local-152504-deployment",
-          "s3Key": "amplify-builds/bornfunction-41734e456c5242787872-build.zip"
+          "s3Key": "amplify-builds/bornfunction-3068576a4e494c2f6756-build.zip"
         }
       },
       "api": {
