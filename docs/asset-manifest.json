@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cdmckinley.github.io/matc-adv-cloud-project-3/static/css/main.f855e6bc.css",
+    "main.js": "/cdmckinley.github.io/matc-adv-cloud-project-3/static/js/main.279d0113.js",
+    "static/js/453.80fe826a.chunk.js": "/cdmckinley.github.io/matc-adv-cloud-project-3/static/js/453.80fe826a.chunk.js",
+    "index.html": "/cdmckinley.github.io/matc-adv-cloud-project-3/index.html",
+    "main.f855e6bc.css.map": "/cdmckinley.github.io/matc-adv-cloud-project-3/static/css/main.f855e6bc.css.map",
+    "main.279d0113.js.map": "/cdmckinley.github.io/matc-adv-cloud-project-3/static/js/main.279d0113.js.map",
+    "453.80fe826a.chunk.js.map": "/cdmckinley.github.io/matc-adv-cloud-project-3/static/js/453.80fe826a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.279d0113.js"
+  ]
+}
