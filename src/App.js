@@ -1,6 +1,6 @@
 import './App.css';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 // Source: https://docs.amplify.aws/react/build-a-backend/restapi/fetch-data/
 import { get } from 'aws-amplify/api';
 
@@ -21,7 +21,7 @@ const App = () => {
 
   // Define function to all API
   // TODO make notes about changes to this function :)
-  const fetchCoins = async() => {
+  const fetchCoins = useCallback(async() => {
     const { limit, start } = input;
     const restOperation = await get({
       apiName: 'coinapi',
@@ -30,12 +30,12 @@ const App = () => {
     const { body } = await restOperation.response;
     const json = await body.json();
     updateCoins(json.coins);
-  }
+  }, [input]);
 
   // Call fetchCoins function when component loads
   useEffect(() => {
     fetchCoins()
-  }, [])
+  }, [fetchCoins]);
 
   return (
     <div className="App">
