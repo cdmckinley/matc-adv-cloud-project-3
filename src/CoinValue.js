@@ -4,6 +4,7 @@ import { get } from 'aws-amplify/api';
 
 import LoadingText from './LoadingText';
 
+// CoinValue component. Modified from textbook's App component to work with updated amplify API
 export default () => {
     // Create coins variable and set to empty array
   const [coins, updateCoins] = useState([])
@@ -15,8 +16,8 @@ export default () => {
     updateInput({ ...input, [type]: value });
   }
 
-  // Define function to all API
-  // TODO make notes about changes to this function :)
+  // Define function to call API
+  // Referenced https://react.dev/reference/react/useCallback
   const fetchCoins = useCallback(async() => {
     const { limit, start } = input;
     const restOperation = await get({
